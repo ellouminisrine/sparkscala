@@ -68,6 +68,8 @@ object extraction {
   val  DFAgg =(projApi.groupBy("typology_name").agg(count("*")))           
   DFAgg.write.format("com.databricks.spark.csv").option("header", "false").mode("overwrite").save("outfile")
   //projApi.show()
+  
+  
   }
   
 }
